@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import { IUserData } from "./components/models/IUserDataModel";
+import CreateUser from "./components/CreateUser/CreateUser";
+import UsersComponents from "./components/UserComponent/UsersComponent";
+import { useLocalStorage } from "./components/hooks/useLocalStorage";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
+  const [usersData, setUsersData] = useLocalStorage<IUserData[]>("DATA", []);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Container
+      className="container-fluid"
+      style={{ fontFamily: "Courgette, cursive" }}
+    >
+      <header>
+        <Header />
       </header>
-    </div>
+      <main className="d-flex " style={{ width: "100%" }}>
+        <section className="mb-2" style={{ width: "30%" }}>
+          <CreateUser
+            users={usersData}
+            setUsers={setUsersData}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
+        </section>
+        <section style={{ width: "70%" }}>
+          <UsersComponents
+            searchTerm={searchTerm}
+            usersData={usersData}
+            setUsersData={setUsersData}
+          />
+        </section>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </Container>
   );
-}
+};
 
 export default App;
