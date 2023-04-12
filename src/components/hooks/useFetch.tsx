@@ -24,8 +24,7 @@ export const useFetch = (baseURL: string): IApiResponseData => {
   };
   useEffect(() => {
     fetchUserData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [baseURL]);
 
   return { users, error } as IApiResponseData;
 };

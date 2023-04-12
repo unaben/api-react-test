@@ -41,7 +41,7 @@ const UsersComponent: React.FC<IUserProps> = ({
       ) : (
         <div className="ms-3 " style={{ width: "100%" }}>
           <div className="user-container">
-            <ul className="d-flex mb-3 flex-wrap align-items-start">
+            <div className="d-flex mb-3 flex-wrap align-items-start">
               {multiFilter.length === 0 ? (
                 <h2>{message.noMatchingDetailsFound}</h2>
               ) : (
@@ -53,7 +53,7 @@ const UsersComponent: React.FC<IUserProps> = ({
                   />
                 ))
               )}
-            </ul>
+            </div>
           </div>
         </div>
       )}

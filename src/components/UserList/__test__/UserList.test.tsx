@@ -75,9 +75,7 @@ describe("UserListComponent", () => {
   //   } as IUserData;
   //   const handleDelete = jest.fn();
   //   render(<UsersList user={user} handleDelete={handleDelete} />);
-
-  //   const listItemEl = await screen.findAllByRole("listitem");
-  //   // logRoles(listItemEl);
+  //   const listItemEl = await screen.findAllByRole("listitem"); 
   //   // debug()
   //   expect(listItemEl).toHaveLength(listItemEl.length);
   // });

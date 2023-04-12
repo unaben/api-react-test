@@ -1,9 +1,6 @@
 import { IUserData } from "../models/IUserDataModel";
 import { keysOf } from "../helper/Keysof";
 
-// function keysOf<T extends Object>(obj: T): Array<keyof T> {
-//   return Array.from(Object.keys(obj)) as any;
-// }
 
 const useMultiFilter = (contactData: IUserData[], value: string) => {
   const multiFilter = contactData.filter((user) => {

@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders heading text correctly", () => {
   render(<App />);
-  const linkElement = screen.getByText(/React Api Testing Tutorial/i);
+  const linkElement = screen.getByText(/React Api Project/i);
   expect(linkElement).toBeInTheDocument();
 });
