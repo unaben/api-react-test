@@ -1,9 +1,9 @@
 import React, { FormEventHandler } from "react";
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { IUserData } from "../models/IUserDataModel";
+import { IUserData } from "../../models/IUserDataModel";
 import SearchInput from "../SearchInput/SearchInput";
-import { message } from "../translate/EN";
+import { message } from "../../translate/EN";
 
 type ICreateUserProps = {
   users: IUserData[];

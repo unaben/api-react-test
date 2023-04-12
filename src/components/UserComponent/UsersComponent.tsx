@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import UsersList from "../UserList/UsersList";
-import { IUserData } from "../models/IUserDataModel";
-import useFetch, { IApiResponseData } from "../hooks/useFetch";
-import useMultiFilter from "../hooks/useFilterUserData";
-import { message } from "../translate/EN";
+import { IUserData } from "../../models/IUserDataModel";
+import useFetch, { IApiResponseData } from "../../hooks/useFetch";
+import useMultiFilter from "../../hooks/useFilterUserData";
+import { message } from "../../translate/EN";
 import "./UsersComponent.css";
 
 interface IUserProps {

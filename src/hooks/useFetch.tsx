@@ -14,11 +14,21 @@ export const useFetch = (baseURL: string): IApiResponseData => {
     try {
       const responce = await fetch(baseURL);
       const resData = await responce.json();
-      setUsers(resData) as unknown as IUserData[];
+      setUsers(
+        resData.map((user: IUserData) => {
+          return {
+            id: user.id,
+            name: user.name,
+            username: user.username,
+            email: user.email,
+            website: user.website,
+          };
+        })
+      ) as unknown as IUserData[];
     } catch (error) {
       if (error instanceof Error) {
         console.error(error.message);
-        setError(error.message);
+        setError("Error fetching users");
       }
     }
   };

@@ -1,5 +1,5 @@
 import React from "react";
-import { message } from "../translate/EN";
+import { message } from "../../translate/EN";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { message } from "../translate/EN";
+import { message } from "../../translate/EN";
 
 const Footer = () => {
   const [date, setDate] = useState(new Date());

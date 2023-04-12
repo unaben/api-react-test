@@ -1,6 +1,6 @@
 import React, { render, screen } from "@testing-library/react";
 import UsersList from "../UsersList";
-import { IUserData } from "../../models/IUserDataModel";
+import { IUserData } from "../../../models/IUserDataModel";
 import userEvent from "@testing-library/user-event";
 
 describe("UserListComponent", () => {
@@ -64,19 +64,4 @@ describe("UserListComponent", () => {
 
     expect(paragraphEl).toBeInTheDocument();
   });
-
-  // it("should render list of users", async () => {
-  //   const user = {
-  //     id: 1,
-  //     name: "Steven Rico",
-  //     username: "ricosmile",
-  //     email: "ricosmile@gmail.com",
-  //     website: "rico.info",
-  //   } as IUserData;
-  //   const handleDelete = jest.fn();
-  //   render(<UsersList user={user} handleDelete={handleDelete} />);
-  //   const listItemEl = await screen.findAllByRole("listitem"); 
-  //   // debug()
-  //   expect(listItemEl).toHaveLength(listItemEl.length);
-  // });
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { IUserData } from "../models/IUserDataModel";
-import { message } from "../translate/EN";
+import { IUserData } from "../../models/IUserDataModel";
+import { message } from "../../translate/EN";
 
 type IUserListProps = {
   user: IUserData;

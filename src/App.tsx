@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import { IUserData } from "./components/models/IUserDataModel";
+import { IUserData } from "./models/IUserDataModel";
 import CreateUser from "./components/CreateUser/CreateUser";
 import UsersComponents from "./components/UserComponent/UsersComponent";
-import { useLocalStorage } from "./components/hooks/useLocalStorage";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
